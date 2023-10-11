@@ -1,0 +1,14 @@
+{
+  "name": "pomodorotimeronline",
+  "version": "1.0.0",
+  "description": "Web application that monitors and tracks study time.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "JavaScript"
+  ],
+  "author": "Afton Lawver",
+  "license": "ISC"
+}

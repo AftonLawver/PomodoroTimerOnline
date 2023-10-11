@@ -1,0 +1,324 @@
+:root {
+    /* ===== Colors ===== */
+    --body-color: #2C313C;
+    --text-color: #c5c4c4;
+    --background-color: #272C36;
+    --task-bar-background-color-normal: #1B1D23;
+    --nav-bar-button-color: #c5c4c4;
+
+}
+
+html {
+    background-color: white;
+}
+
+body {
+    margin:0;
+    padding: 0;
+    font-family: 'JetBrains Mono';
+    font-size: 1.5rem;
+    height: 100%;
+}
+
+.mainApp {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 600px;
+    height: 300px;
+    margin: auto;
+    overflow: hidden;
+    color: var(--text-color);
+    background-color: var(--body-color);
+    -webkit-box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.mainApp > .topBar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 40px;
+    border-bottom: 3px solid #343B48; /* possibly change this color */
+    background-color: var(--task-bar-background-color-normal);
+    -webkit-user-select: none;
+}
+
+.topBar > .titleBar {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%
+}
+
+.titleBar > .toggleButton {
+    width: 45px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    transition: 0.2s;
+    cursor: pointer;
+    color: var(--nav-bar-button-color);
+
+}
+
+.titleBar > .toggleButton:hover{
+    background-color: var(--background-color);
+}
+
+.titleBar > .toggleButton:active{
+    background-color: #4F9FEE;
+}
+
+#logo {
+    padding-left: 4px;
+    width: 22px;
+    height: 22px;
+}
+
+.titleBar > .title {
+    margin-left: 10px;
+    width: 100%;
+    line-height: 30px;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    -webkit-app-region: drag;
+}
+
+.topBar > .titleBarBtns {
+    display: flex;
+    flex-direction: row;
+    width: 120px;
+    height: 40px;
+}
+
+.titleBarBtns > .topBtn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.2s;
+    cursor: pointer;
+    color: var(--nav-bar-button-color);
+}
+
+.titleBarBtns > .topBtn:hover {
+    background-color: var(--background-color);
+}
+
+.titleBarBtns > .closeBtn:hover {
+    background-color: #b70101;
+}
+
+.titleBarBtns > .minimizeBtn {
+    padding-bottom: 13px;
+}
+
+.mainApp > .contentArea {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.mainApp > .contentArea > .leftMenu {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: var(--background-color);
+    display: none;
+}
+
+#mySideBar {
+    width: 10% !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebarButtons {
+    color: var(--text-color);
+    font-size: 12px;
+    background: transparent;
+    padding: 5vh 0 3vh 0;
+    display: block;
+    border: none;
+    margin:0 auto;
+    display:block;
+    justify-content: center;
+}
+
+#userButton, #metricsButton, #modeButton {
+    font-size: 2.5vw;
+}
+
+.leftMenu > button:hover {
+    cursor: pointer;
+    color: #f8cc1d;
+}
+
+.mainApp > .contentArea > .contentPages {
+    width: 100%;
+    height: 100%;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+}
+
+.time {
+    font-size: 22px;
+    text-align: center;
+}
+
+.greeting_and_date {
+    padding-top: 5%;
+    text-align: center;
+}
+
+#date {
+    font-size: 12px;
+    padding-left: 20px;
+}
+
+#spot1, #spot2, #spot3 {
+    text-align: center;
+}
+
+.buttons {
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+.time_button, .control_button, .break_button, .start_session, #loginButton {
+    appearance: none;
+    backface-visibility: hidden;
+    background-color: #f8cc1d;
+    border-radius: 8px;
+    border-style: none;
+    box-shadow: rgb(218, 180, 38) 0 4px 9px;
+    box-sizing: border-box;
+    color: #030303;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: normal;
+    line-height: 1.0;
+    outline: none;
+    overflow: hidden;
+    padding: 13px 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transform: translate3d(0, 0, 0);
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.time_button:hover, .control_button:hover, .break_button:hover, .start_session, #loginButton:hover {
+    background-color: #f8d655;
+    opacity: 1;
+    transition-duration: .35s;
+}
+
+.time_button:active, .control_button:active, .break_button:active, .start_session, #loginButton:active {
+    transform: translateY(2px);
+    transition-duration: .35s;
+}
+
+#progressBar {
+    width: 75%;
+    margin: 10px auto;
+    height: 22px;
+    background-color: #100f08;
+    display:none;
+}
+
+#progressBar div {
+    height: 100%;
+    text-align: right;
+    padding: 0 10px;
+    line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+    width: 0;
+    background-color: #ffd433;
+    box-sizing: border-box;
+    color: black;
+}
+
+.control_button, .break_button {
+    display: none;
+}
+
+#label2, #study_again_button, #label3 {
+    display: none;
+}
+
+body.dark-mode {
+    background-color: #888888; /* Dark mode background color */
+    color: #272C36; /* Dark mode text color */
+}
+
+.mainApp > .topBar.dark-mode {
+    border-bottom: 3px solid #999999; /* possibly change this color */
+    background-color: #666666;
+}
+
+.titleBar > .toggleButton.dark-mode {
+    color: #272C36;
+}
+
+.titleBar > .toggleButton.dark-mode:hover{
+    background-color: var(--text-color);
+}
+
+.titleBar > .toggleButton.dark-mode:active{
+    background-color: #4F9FEE;
+}
+
+.titleBarBtns > .topBtn.dark-mode {
+    color: #272C36;
+}
+
+.titleBarBtns > .topBtn.dark-mode:hover {
+    background-color: var(--text-color);
+}
+
+.titleBarBtns >.closeBtn.dark-mode:hover {
+    background-color: darkred;
+}
+
+.mainApp > .contentArea > .leftMenu.dark-mode {
+    background-color: #777777;
+}
+
+.sidebarButtons.dark-mode {
+    color: var(--background-color);
+}
+
+.login {
+    margin: auto;
+}
+
+.filepath {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .mainApp {
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+
