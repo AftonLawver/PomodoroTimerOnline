@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, '/welcome.html'));
+    res.sendFile(path.join(__dirname, 'public/welcome.html'));
 });
 
 app.listen(PORT, err => {

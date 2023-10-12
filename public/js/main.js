@@ -4,7 +4,6 @@ let isModeButtonActive = true;
 
 // TOGGLE BUTTON
 // Expand and Retract
-const showHideMenus = document.getElementById('showHideMenus');
 document.getElementById('showHideMenus')?.addEventListener('click', ()=> {
     if(isLeftMenuActive) {
         isLeftMenuActive = false;
@@ -17,7 +16,6 @@ document.getElementById('showHideMenus')?.addEventListener('click', ()=> {
     }
 })
 
-const modeButton = document.getElementById('modeButton');
 const fontIconModeButton = document.getElementById('fontIconModeBtn');
 
 document.getElementById('modeButton')?.addEventListener('click', ()=> {
@@ -50,7 +48,6 @@ if (document.getElementById('date') !== null) {
     document.getElementById('date').innerHTML = date;
 
 }
-
 
 let time = new Date().toLocaleTimeString();
 function displayClock() {
@@ -257,13 +254,6 @@ function toggleMode() {
 const settingsButton = document.querySelector('#userButton');
 settingsButton.addEventListener('click', () => {
     console.log('settings button clicked.');
-})
-
-const signUpButton = document.getElementById("signUpButton");
-signUpButton.addEventListener('click', () => {
-    console.log('sign up button clicked.');
-
-    window.location.href = 'register.html';
 })
 
 

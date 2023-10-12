@@ -10,14 +10,13 @@
     <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'/>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <script src="js/jquery-3.6.3.js"></script>
-    <script defer src="js/main.js"></script>
+    <script defer src="js/register.js"></script>
 </head>
 <body>
 <div class="mainApp">
     <div id="topBar" class="topBar">
         <div class="titleBar">
-            <img id="logo" src="../assets/icons/png/icon.png">
+            <img id="logo" src="assets/icons/png/icon.png">
             <div id="title" class="title">
                 Pomodoro Timer
             </div>
@@ -28,7 +27,6 @@
             <hr>
             <h3>Create Your Account</h3>
             <br>
-            <div id="form-container">
                 <form id="registrationForm">
                     <label for="firstNameInput">First name</label>
                     <input class="custom-input" id="firstNameInput" type="text" placeholder="John" name="firstName">
@@ -47,16 +45,12 @@
 
                     <div id="createAccountButtons">
                         <button class="buttons" id="createAccountButton">Create Account</button>
-                        <input id="resetButton" type="reset"
+                        <input class="buttons" id="resetButton" type="reset"
                                name="clear" value="Clear Form"/>
                     </div>
                 </form>
-
-            </div>
-
             <br>
             <hr>
-
         </div>
     </div>
 </div>

@@ -1,4 +1,4 @@
-![Image not found!](assets/images/banner.png)
+![Image not found!](public/assets/images/banner.png)
 `PomodoroTimerOnline` is a web application that monitors and tracks study time.
 
 Add gif of the product working.

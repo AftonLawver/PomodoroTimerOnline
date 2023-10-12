@@ -10,38 +10,39 @@
     <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'/>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <script src="js/jquery-3.6.3.js"></script>
-    <script defer src="js/main.js"></script>
+    <script defer src="js/login.js"></script>
 </head>
 <body>
 <div class="mainApp">
     <div id="topBar" class="topBar">
         <div class="titleBar">
-            <button id="showHideMenus" class="toggleButton"><i id="toggleButton" class="fa-solid fa-bars fa-2x"></i></button>
-            <img id="logo" src="../assets/icons/png/icon.png">
+            <img id="logo" src="assets/icons/png/icon.png">
             <div id="title" class="title">
                 Pomodoro Timer
             </div>
         </div>
     </div>
     <div class="contentArea">
-        <div id="contentPages" class="contentPages">
-            <div class="greeting_and_date">
-                <span id="greeting"></span>
-                <span id="name">Afton.</span>
-                <div id="date"></div>
+        <div id="contentPages" class="contentPages" style="padding-top: 70px;">
+            <hr>
+            <h3>Login</h3>
+            <br>
+            <div id="form-container">
+                <form id="loginForm">
+                    <label for="firstNameInput">First name</label>
+                    <input class="custom-input" id="firstNameInput" type="text" placeholder="John" name="firstName">
+                    <br>
+                    <label for="passwordInput">Password</label>
+                    <input class="custom-input" id="passwordInput" type="password" placeholder="Enter Password"required>
+                    <br>
+                    <div id="createAccountButtons">
+                        <button class="buttons" id="loginActionButton">Login</button>
+                        <button class="buttons" id="forgotPasswordButton">Forgot Password</button>
+                    </div>
+                </form>
             </div>
             <br>
-            <div class="time">
-                <span id="time"></span>
-            </div>
-            <div id="spot1">
-                <span id="label1">Enter</span>
-            <br>
-            <div id="buttons" class="buttons">
-                <button>Login</button>
-            </div>
-
+            <hr>
         </div>
     </div>
 </div>
