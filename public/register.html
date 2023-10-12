@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' "/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script src="js/jquery-3.6.3.js"></script>
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+<div class="mainApp">
+    <div id="topBar" class="topBar">
+        <div class="titleBar">
+            <img id="logo" src="../assets/icons/png/icon.png">
+            <div id="title" class="title">
+                Pomodoro Timer
+            </div>
+        </div>
+    </div>
+    <div class="contentArea">
+        <div id="contentPages" class="contentPages">
+            <hr>
+            <h3>Create Your Account</h3>
+            <br>
+            <div id="form-container">
+                <form id="registrationForm">
+                    <label for="firstNameInput">First name</label>
+                    <input class="custom-input" id="firstNameInput" type="text" placeholder="John" name="firstName">
+                    <br>
+                    <label for="lastNameInput">Last name</label>
+                    <input class="custom-input" id="lastNameInput" type="text" placeholder="Smith" name="firstName">
+                    <br>
+                    <label for="emailInput">Email Address</label>
+                    <input class="custom-input" id="emailInput" type="text" placeholder="Enter Email" required>
+                    <br>
+                    <label for="passwordInput">Password</label>
+                    <input class="custom-input" id="passwordInput" type="password" placeholder="Enter Password"required>
+                    <br>
+                    <label for="passwordInputRepeat">Repeat Password</label>
+                    <input class="custom-input" id="passwordInputRepeat" type="password" placeholder="Repeat Password" required>
+
+                    <div id="createAccountButtons">
+                        <button class="buttons" id="createAccountButton">Create Account</button>
+                        <input id="resetButton" type="reset"
+                               name="clear" value="Clear Form"/>
+                    </div>
+                </form>
+
+            </div>
+
+            <br>
+            <hr>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

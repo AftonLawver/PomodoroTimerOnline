@@ -1,5 +1,5 @@
 {
-  "name": "pomodorotimeronline",
+  "name": "Pomodoro Timer Online",
   "version": "1.0.0",
   "description": "Web application that monitors and tracks study time.",
   "main": "index.js",
@@ -10,5 +10,10 @@
     "JavaScript"
   ],
   "author": "Afton Lawver",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  }
 }

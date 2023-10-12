@@ -1,23 +1,11 @@
-const minimizeBtn = document.getElementById('minimizeBtn');
-const closeBtn = document.getElementById('closeBtn');
-const maxResBtn = document.getElementById('maxResBtn');
 let isLeftMenuActive = false;
 const mySideBar = document.getElementById('mySideBar');
 let isModeButtonActive = true;
-minimizeBtn.addEventListener('click', ()=> {
-    window.electronAPI.minimize();
-});
-
-closeBtn.addEventListener('click', ()=> {
-    window.electronAPI.close();
-});
-
-
 
 // TOGGLE BUTTON
 // Expand and Retract
 const showHideMenus = document.getElementById('showHideMenus');
-document.getElementById('showHideMenus').addEventListener('click', ()=> {
+document.getElementById('showHideMenus')?.addEventListener('click', ()=> {
     if(isLeftMenuActive) {
         isLeftMenuActive = false;
         mySideBar.style.display = 'none';
@@ -58,10 +46,13 @@ const minutes_in_seconds_50 = 3000;
 const minutes_in_seconds_5 = 300;
 const minutes_in_seconds_10 = 600;
 let date = new Date().toDateString();
-document.getElementById('date').innerHTML = date;
+if (document.getElementById('date') !== null) {
+    document.getElementById('date').innerHTML = date;
+
+}
+
+
 let time = new Date().toLocaleTimeString();
-
-
 function displayClock() {
     let time = new Date().toLocaleTimeString();
     document.getElementById('time').innerHTML = time;
@@ -71,15 +62,20 @@ function displayClock() {
 if (time.charAt(time.length-2) === 'P') {
     let hour = new Date().getHours();
     if (hour >= 16) {
-        document.getElementById('greeting').innerHTML = "Good Evening, ";
+        if(document.getElementById('greeting') !== null) {
+            document.getElementById('greeting').innerHTML = "Good Evening, ";
+        }
     }
     else {
-        document.getElementById('greeting').innerHTML = "Good Afternoon, ";
+        if(document.getElementById('greeting') !== null) {
+            document.getElementById('greeting').innerHTML = "Good Afternoon, ";
+        }
     }
 }
 else {
-    document.getElementById('greeting').innerHTML = "Good Morning, ";
-    $("#test").html("Hello, World!");
+    if(document.getElementById('greeting') !== null) {
+        document.getElementById('greeting').innerHTML = "Good Morning, ";
+    }
 }
 
 const button25Minutes = document.getElementById("25_minute_button");
@@ -261,15 +257,13 @@ function toggleMode() {
 const settingsButton = document.querySelector('#userButton');
 settingsButton.addEventListener('click', () => {
     console.log('settings button clicked.');
-    window.electronAPI.openSettingsWindow();
 })
 
-// const loginButton = document.getElementById("loginButton");
-// loginButton.addEventListener('click', ()=>{
-//     let input = document.getElementById("firstname").innerText;
-//     // send input to the main process
-//     console.log("in login button click.")
-//     window.electronAPI.openMainWindow();
-// })
+const signUpButton = document.getElementById("signUpButton");
+signUpButton.addEventListener('click', () => {
+    console.log('sign up button clicked.');
+
+    window.location.href = 'register.html';
+})
 
 

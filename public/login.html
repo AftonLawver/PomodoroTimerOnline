@@ -1,42 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="script-src 'self' "/>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'/>
-  <link rel="stylesheet" href="css/style.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-  <script src="js/jquery-3.6.3.js"></script>
-  <script src="js/main.js" defer></script>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' "/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script src="js/jquery-3.6.3.js"></script>
+    <script defer src="js/main.js"></script>
 </head>
 <body>
 <div class="mainApp">
-  <div id="topBar" class="topBar">
-    <div class="titleBar">
-      <img id="logo" src="../assets/icons/png/icon.png">
-      <div id="title" class="title">
-        Login
-      </div>
+    <div id="topBar" class="topBar">
+        <div class="titleBar">
+            <button id="showHideMenus" class="toggleButton"><i id="toggleButton" class="fa-solid fa-bars fa-2x"></i></button>
+            <img id="logo" src="../assets/icons/png/icon.png">
+            <div id="title" class="title">
+                Pomodoro Timer
+            </div>
+        </div>
     </div>
-    <div id="titleBarBtns" class="titleBarBtns">
-      <button id="minimizeBtn" class="topBtn minimizeBtn" title="Minimize"><i class="fa-solid fa-window-minimize fa-xl"></i></button>
-      <button id="maxResBtn" class="topBtn maximizeBtn" title="Maximize"><i id="fontIconMaxResBtn" class="fa-regular fa-square fa-xl"></i></button>
-      <button id="closeBtn" class="topBtn closeBtn" title="Close"><i class="fa-solid fa-xmark fa-xl"></i></button>
-    </div>
-  </div>
-  <div class="contentArea">
-    <div class="login">
-      <label id="firstnameLabel" for="firstname">First name:</label>
-      <input type="text" id="firstname" name="firstname" autofocus required>
-      <input id="loginButton" value="Login"/>
+    <div class="contentArea">
+        <div id="contentPages" class="contentPages">
+            <div class="greeting_and_date">
+                <span id="greeting"></span>
+                <span id="name">Afton.</span>
+                <div id="date"></div>
+            </div>
+            <br>
+            <div class="time">
+                <span id="time"></span>
+            </div>
+            <div id="spot1">
+                <span id="label1">Enter</span>
+            <br>
+            <div id="buttons" class="buttons">
+                <button>Login</button>
+            </div>
 
+        </div>
     </div>
-
-  </div>
 </div>
 </body>
 </html>
