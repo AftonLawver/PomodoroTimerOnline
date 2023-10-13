@@ -4,7 +4,6 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' "/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'/>
@@ -29,27 +28,32 @@
             <br>
                 <form id="registrationForm">
                     <label for="firstNameInput">First name</label>
-                    <input class="custom-input" id="firstNameInput" type="text" placeholder="John" name="firstName">
-                    <br>
+                    <input class="custom-input" id="firstNameInput" type="text" placeholder="John" name="firstName" onkeyup="validateFirstName()">
+                    <p class="error" id="firstNameErrorMessage"></p>
                     <label for="lastNameInput">Last name</label>
-                    <input class="custom-input" id="lastNameInput" type="text" placeholder="Smith" name="firstName">
-                    <br>
+                    <input class="custom-input" id="lastNameInput" type="text" placeholder="Smith" name="lastName" onkeyup="validateLastName()">
+                    <p class="error" id="lastNameErrorMessage"></p>
                     <label for="emailInput">Email Address</label>
-                    <input class="custom-input" id="emailInput" type="text" placeholder="Enter Email" required>
-                    <br>
+                    <input class="custom-input" id="emailInput" type="text" placeholder="Enter Email" onkeyup="validateEmail()">
+                    <p class="error" id="emailErrorMessage"></p>
                     <label for="passwordInput">Password</label>
-                    <input class="custom-input" id="passwordInput" type="password" placeholder="Enter Password"required>
-                    <br>
+                    <input class="custom-input" id="passwordInput" type="password" placeholder="Enter Password" onkeyup="validatePassword()">
+                    <div id="passwordMessage">
+                        <p id="passwordMessageHeading">Password must contain the following:</p>
+                        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                        <p id="number" class="invalid">A <b>number</b></p>
+                        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                    </div>
                     <label for="passwordInputRepeat">Repeat Password</label>
-                    <input class="custom-input" id="passwordInputRepeat" type="password" placeholder="Repeat Password" required>
-
+                    <input class="custom-input" id="passwordInputRepeat" type="password" placeholder="Repeat Password" onkeyup="doPasswordsMatch()">
+                    <p class="error" id="passwordRepeatErrorMessage"></p>
                     <div id="createAccountButtons">
                         <button class="buttons" id="createAccountButton">Create Account</button>
                         <input class="buttons" id="resetButton" type="reset"
                                name="clear" value="Clear Form"/>
                     </div>
                 </form>
-            <br>
             <hr>
         </div>
     </div>

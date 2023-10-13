@@ -25,7 +25,7 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     width: 600px;
-    height: 500px;
+    height: 700px;
     margin: auto;
     overflow: hidden;
     color: var(--text-color);
@@ -301,6 +301,7 @@ hr {
 #contentPages > h3 {
     text-align: center;
     margin-bottom: 0;
+    margin-top: 10px;
 }
 
 #contentPages > p {
@@ -309,7 +310,6 @@ hr {
 
 #registrationForm {
     padding: 5px;
-    border-radius: 10px;
     text-align: left;
 }
 
@@ -331,7 +331,63 @@ form > label {
 
 #createAccountButtons {
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
+}
+
+input {
+    all: unset;
+    border: 2px solid grey;
+    background: white;
+    color: black;
+    padding: 2px;
+    border-radius: 2px;
+}
+
+.error {
+    display: none;
+    font-size: 12px;
+    color: red;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+#length, #capital, #number, #letter {
+    font-size: 12px;
+}
+
+#passwordMessage {
+    display:none;
+    background: #202334;
+    color: var(--text-color);
+    position: relative;
+    padding: 10px 25px;
+    margin: 10px 4vw;
+    border-radius: 10px;
+}
+
+#passwordMessage > p {
+    font-size: 12px;
+}
+
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -15px;
+    content: "✔";
+}
+
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -15px;
+    content: "✖";
 }
 
 @media screen and (max-width: 576px) {
@@ -367,12 +423,10 @@ form > label {
 
     #createAccountButtons {
         text-align: center;
-        padding: 20px 0;
+        padding: 10px 0;
     }
 
-    .contentArea {
-        padding-top: 80px;
-    }
+
 }
 
 @media only screen and (min-width: 577px) and (max-width: 768px) {
