@@ -1,6 +1,6 @@
 function validateFirstName() {
     const firstNameInput = document.getElementById('firstNameInput');
-    if (!firstNameInput.value.match(/^(?=.{1,40}$)[a-zA-Z]+(?:[-'\s][a-zA-Z]+)*$/)) {
+    if (!firstNameInput.value.match(/^(?=.{1,40}$)[a-zA-Z]+(?:[-'\s][a-zA-Z]+)*$/) && (!firstNameInput.value)) {
         let firstNameErrorMessage = document.getElementById("firstNameErrorMessage");
         firstNameErrorMessage.innerHTML = "Please enter a valid first" +
             " name.";
@@ -110,6 +110,9 @@ const validatePassword = function() {
 
     if (sum === 4) {
         passwordInput.style.border = "2px solid green";
+    }
+    else {
+        passwordInput.style.border = "2px solid red";
     }
 }
 

@@ -4,7 +4,6 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' "/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'/>
@@ -31,8 +30,22 @@
             <div id="buttons">
                 <button id="signUpButton" class="buttons">Sign Up</button>
                 <button id="loginButton" class="buttons">Login</button>
+
             </div>
             <br>
+            <div id="secondButtonArea">
+                <button id="continueAsGuestButton" class="buttons">Continue as guest</button>
+            </div>
+            <br>
+            <div id="nameSectionPopup">
+                <label for="nameInput">Enter your name</label>
+                <br>
+                <input class="custom-input" id="nameInput" type="text" placeholder="John" name="firstName" onkeyup="validateName()">
+                <p class="error" id="firstNameErrorMessage"></p>
+                <button id="submitAsGuestButton" class="buttons">Submit</button>
+            </div>
+            <br>
+
             <hr>
         </div>
     </div>

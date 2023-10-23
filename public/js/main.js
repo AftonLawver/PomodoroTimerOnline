@@ -2,6 +2,12 @@ let isLeftMenuActive = false;
 const mySideBar = document.getElementById('mySideBar');
 let isModeButtonActive = true;
 
+document.addEventListener('DOMContentLoaded', function() {
+    let name = localStorage.getItem("name");
+    let nameElement = document.getElementById('name');
+    nameElement.textContent = name;
+});
+
 // TOGGLE BUTTON
 // Expand and Retract
 document.getElementById('showHideMenus')?.addEventListener('click', ()=> {
@@ -245,6 +251,9 @@ function toggleMode() {
 
     const leftMenu = document.getElementById('mySideBar');
     leftMenu.classList.toggle('dark-mode');
+
+    const contentPages = document.getElementById('contentPages');
+    contentPages.classList.toggle('dark-mode');
 
     const sidebarButtons = document.getElementsByClassName('sidebarButtons');
     for (let i = 0; i < sidebarButtons.length; i++) {

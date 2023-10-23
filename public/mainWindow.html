@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <script src="js/jquery-3.6.3.js"></script>
-    <script defer src="js/main.js"></script>
+
 </head>
 <body>
     <div class="mainApp">
@@ -33,7 +33,7 @@
             <div id="contentPages" class="contentPages">
                 <div class="greeting_and_date">
                     <span id="greeting"></span>
-                    <span id="name">Afton.</span>
+                    <span id="name"></span>
                     <div id="date"></div>
                 </div>
                 <br>
@@ -50,16 +50,16 @@
                     <span id="label3">Break is over</span>
                 </div>
                 <br>
-                <div id="buttons" class="buttons">
-                    <button  id="25_minute_button" class="time_button" type="button">25 minutes</button>
-                    <button id="50_minute_button" class="time_button" type="button">50 minutes</button>
-                    <button id="start_button" class="control_button" type="button">Start</button>
-                    <button id="pause_button" class="control_button" type="button">Pause</button>
-                    <button  id="stop_button" class="control_button" type="button">Stop</button>
-                    <button id="5_minute_break_button" class="break_button" type="button">5 minute break</button>
-                    <button id="10_minute_break_button" class="break_button" type="button">10 minute break</button>
-                    <button  id="done_studying_button" class="break_button" type="button">I'm done studying</button>
-                    <button  id="study_again_button" class="start_session" type="button">Start another study session</button>
+                <div id="buttonArea">
+                    <button id="25_minute_button" class="time_button buttons" type="button">25 minutes</button>
+                    <button id="50_minute_button" class="time_button buttons" type="button">50 minutes</button>
+                    <button id="start_button" class="control_button buttons" type="button">Start</button>
+                    <button id="pause_button" class="control_button buttons" type="button">Pause</button>
+                    <button  id="stop_button" class="control_button buttons" type="button">Stop</button>
+                    <button id="5_minute_break_button" class="break_button buttons" type="button">5 minute break</button>
+                    <button id="10_minute_break_button" class="break_button buttons" type="button">10 minute break</button>
+                    <button  id="done_studying_button" class="break_button buttons" type="button">I'm done studying</button>
+                    <button  id="study_again_button" class="start_session buttons" type="button">Start another study session</button>
                 </div>
                 <div id="progressBar">
                     <div class="bar"></div>
@@ -69,5 +69,6 @@
         </div>
     </div>
 </body>
+<script defer src="js/main.js"></script>
 </html>
 

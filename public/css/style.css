@@ -185,11 +185,6 @@ body {
 }
 
 .buttons {
-    text-align: center;
-    padding-bottom: 2%;
-}
-
-.buttons {
     background-color: #f8cc1d;
     border-radius: 8px;
     border-style: none;
@@ -262,6 +257,11 @@ body.dark-mode {
     background-color: #666666;
 }
 
+.mainApp > .contentArea #contentPages.dark-mode {
+    background-color: #888888; /* Dark mode background color */
+    color: #272C36; /* Dark mode text color */
+}
+
 .titleBar > .toggleButton.dark-mode {
     color: #272C36;
 }
@@ -292,10 +292,6 @@ body.dark-mode {
 
 hr {
     width: 90%;
-}
-
-#buttons {
-    text-align: center;
 }
 
 #contentPages > h3 {
@@ -388,6 +384,19 @@ input {
     position: relative;
     left: -15px;
     content: "✖";
+}
+
+#secondButtonArea {
+    text-align: center;
+}
+
+#nameSectionPopup {
+    display: none;
+    text-align: center;
+}
+
+#buttonArea {
+    text-align: center;
 }
 
 @media screen and (max-width: 576px) {
