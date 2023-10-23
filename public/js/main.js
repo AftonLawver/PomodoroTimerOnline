@@ -43,7 +43,6 @@ document.getElementById('modeButton')?.addEventListener('click', ()=> {
 })
 if (document.body.contains(document.getElementById('time'))) {
     window.onload = displayClock();
-
 }
 const minutes_in_seconds_25 = 1500;
 const minutes_in_seconds_50 = 3000;

@@ -1,4 +1,4 @@
-![Image not found!](public/assets/images/banner.png)
+![Image not found!](public/assets/images/pomodoro_timer_banner.png)
 `PomodoroTimerOnline` is a web application that monitors and tracks study time.
 
 Add gif of the product working.
@@ -7,18 +7,15 @@ Add gif of the product working.
 ---
 
 ```
-To use the pomodoro timer application, open the application at the web address and
-click either study for 25 minutes or 50 minutes. A timer will be set for 
+To use the pomodoro timer application, open the application at the web address:
+(https://pomodoro-timer-online-634cce94af27.herokuapp.com/)
+and use the application as a guest. Then, click either study 
+for 25 minutes or 50 minutes. A timer will be set for 
 the selected time. At that point, you can pause the timer or stop it completely.
 At the end of the study time, an alarm will go off prompting you to take a 
 break for a specified amount of time depending on how long you have studied.
 The timer will be set for the break when the user clicks start break.
 ```
-
-**Installation Options**
----
-
-Add some text to explain installation
 
 **How to Contribute**
 ---
@@ -29,4 +26,5 @@ Add some text to explain installation
 
 **Features in Progress**
 ---
-None at the moment.
+Implement data persistence through use of a web hosted MySQL database that stores
+all user info and study session info. 
