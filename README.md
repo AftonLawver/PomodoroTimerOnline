@@ -30,5 +30,11 @@ The timer will be set for the break when the user clicks start break.
 
 **Features in Progress**
 ---
-Implement data persistence through use of a web hosted MySQL database that stores
+- Implement data persistence through use of a web hosted MySQL database that stores
 all user info and study session info. 
+
+**Bugs to fix**
+---
+- Height of main content on phone is too large. Make for allow scroll if content goes out of view.
+- Make password repeat show invalid if empty
+- Make another input field for repeat email.

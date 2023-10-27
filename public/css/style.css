@@ -405,6 +405,10 @@ input {
     .mainApp {
         width: 100%;
         height: 100%;
+        overflow: auto;
+        top: 0;
+        left: 0;
+        transform: none;
     }
 
     #mySideBar {
